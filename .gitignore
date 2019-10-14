@@ -5,7 +5,7 @@
 !.gitignore
 
 [Mm]isc/
-[Tt]est/
+#[Tt]est/
 .svn/
 .scannerwork/
 
