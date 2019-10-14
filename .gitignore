@@ -1,5 +1,7 @@
 ## Common ignore files
-
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 !.gitignore
 
 [Mm]isc/
@@ -93,6 +95,11 @@ target/
 classes/
 lib/
 
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
 ## Ignore VSCode temporary files
 
@@ -216,3 +223,9 @@ UpgradeLog*.htm
 ##
 [Tt]emp/
 [Tt]mp/
+
+# maven
+mvnw
+mvnw.cmd
+HELP.md
+.mvn/
