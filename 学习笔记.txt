@@ -1,0 +1,6 @@
+
+@RestController and @RequestMapping是springMVC的注解，不是springboot特有的
+
+@RestController = @Controller+@ResponseBody    //@ResponseBody表示把返回结果映射成json
+
+@SpringBootApplication = @Configuration+@EnableAutoConfiguration+@ComponentScan
