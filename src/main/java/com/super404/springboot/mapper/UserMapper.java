@@ -58,5 +58,12 @@ public interface UserMapper {
      */
     @Delete("DELETE FROM user WHERE id =#{userId}")
     void delete(Long userId);
+
+
+    /**
+     * sql写在xml中
+     * @return
+     */
+    List<User> findAll();
 }
 

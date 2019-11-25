@@ -44,8 +44,8 @@ public class UserController {
      * 查找全部用户
      * @return
      */
-    @GetMapping("findAll")
-    public Object findAll(){
+    @GetMapping("getAll")
+    public Object getAll(){
         return  JsonData.buildSuccess(userMapper.getAll());
     }
 
@@ -68,6 +68,11 @@ public class UserController {
         user.setId(id);
         userMapper.update(user);
         return JsonData.buildSuccess();
+    }
+
+    @GetMapping("findAll")
+    public Object findAll(){
+        return  JsonData.buildSuccess(userMapper.findAll());
     }
 
 }
