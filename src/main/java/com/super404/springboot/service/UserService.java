@@ -5,4 +5,6 @@ import com.super404.springboot.domain.User;
 public interface UserService {
 
     public int add(User user);
+
+    public int addByXml(User user);
 }
