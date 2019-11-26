@@ -3,6 +3,6 @@
 
 <mapper namespace="com.super404.springboot.mapper.UserMapper">
     <select id="findAll" resultType="com.super404.springboot.domain.User">
-        select * from user;
+        select t.id, t.name, t.phone, t.create_time as createTime, t.age from user t;
     </select>
 </mapper>
