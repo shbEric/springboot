@@ -4,6 +4,7 @@ import com.super404.springboot.domain.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -50,8 +51,8 @@ public interface UserMapper {
      * 更新对象名称
      * @param user
      */
-    @Update("UPDATE user SET name=#{name} WHERE id =#{id}")
-    void update(User user);
+    @Update("UPDATE user SET name=#{user.name} WHERE id =#{user.id}")
+    void update(@Param("user") User user);
 
     /**
      * 根据id删除用户

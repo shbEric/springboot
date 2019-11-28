@@ -4,6 +4,7 @@ import com.super404.springboot.domain.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -42,5 +43,7 @@ public interface UserXmlMapper {
     User findByIdByXml(Long id);
 
     int insertByXml(User user);
+
+    void updateByXmlUseParam(@Param("name") String name, @Param("id") Long id);
 
 }

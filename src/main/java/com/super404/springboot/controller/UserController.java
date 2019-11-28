@@ -114,7 +114,12 @@ public class UserController {
         int id = userService.addByXml(user);
 
         return JsonData.buildSuccess(id);
+    }
 
+    @GetMapping("update_byXml_useParam")
+    public Object updateByXml(String name,Long id){
+        userXmlMapper.updateByXmlUseParam(name, id);
+        return JsonData.buildSuccess();
     }
 
 }

@@ -19,4 +19,20 @@
             useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         INSERT INTO user(name,phone,create_time,age) VALUES(#{name}, #{phone}, #{createTime}, #{age});
     </insert>
+    
+    <!--多个参数输入时，不需要写parameterType参数
+    有多种方式：
+    1、改用#｛index｝是第几个就用第几个的索引，索引从0开始，select t.* from tableName where id = #{0} and name = #{1}；
+    2、@Param来指定哪一个；
+    3、用java bean封装；
+    4、用map封装，和3类似；
+    5、用List封装，
+                    select ... from XXX where id in
+                　　<foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+                　　　　#{item}
+                　　</foreach>
+    -->
+    <update id="updateByXmlUseParam">
+        UPDATE user SET name=#{name} WHERE id =#{id};
+    </update>
 </mapper>
